@@ -28,9 +28,9 @@
 <% 
 try{
 Class.forName("oracle.jdbc.driver.OracleDriver");
-session.setAttribute("url","@fourier.cs.iit.edu:1521:orcl");
-session.setAttribute("connuname","tpradhan1");
-session.setAttribute("password","YCsBUo3...uK3Z17");
+session.setAttribute("url","(Source database)");
+session.setAttribute("connuname","(Username)");
+session.setAttribute("password","(Password)");
 String url = (String)session.getAttribute("url");
 String connuname = (String)session.getAttribute("connuname");
 String password = (String)session.getAttribute("password");
