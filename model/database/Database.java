@@ -96,6 +96,16 @@ public class Database {
                 "CONSTRAINT UK_STAFF_USER UNIQUE(UNAME)" +
                 ");";
         
+                  //// execute sql
+                ExecuteSQL(sql1);
+                ExecuteSQL(sql2);
+                ExecuteSQL(sql3);
+                ExecuteSQL(sql4);
+                ExecuteSQL(sql5);
+                ExecuteSQL(sql6);
+                ExecuteSQL(sql7);
+                ExecuteSQL(sql8);
+        
         
         
         
@@ -114,8 +124,17 @@ STATE_NAME VARCHAR(10) NOT NULL,
 CONSTRAINT UK_STATE_NAME UNIQUE(STATE_NAME)
 );*/
         
-
-
-
+    }
+    
+     public static void ExecuteSQL(String a){
+        OracleDBConnexion con = new OracleDBConnexion ();
+         try (Connection conn = con.connect();
+                Statement stmt = conn.createStatement()) {
+            stmt.execute(a);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }
