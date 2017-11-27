@@ -6,7 +6,7 @@
      String connuname = (String)session.getAttribute("connuname");
      String password = (String)session.getAttribute("password");
 	 Connection conn = DriverManager.getConnection("jdbc:oracle:thin:" + url,connuname,password);
-	 //Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","scott","Atos123");
+	 
 	 String sql = "SELECT lower(UNAME) UNAME FROM CUSTOMER where lower(UNAME)=?";
 	 String USERNAME=request.getParameter("username");
 	 String User=USERNAME.toLowerCase();
