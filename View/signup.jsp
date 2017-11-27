@@ -35,7 +35,7 @@ String url = (String)session.getAttribute("url");
 String connuname = (String)session.getAttribute("connuname");
 String password = (String)session.getAttribute("password");
 Connection conn = DriverManager.getConnection("jdbc:oracle:thin:" + url,connuname,password); 
-	 //Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","scott","Atos123");
+	 
 Statement st = conn.createStatement();
 String sql = "select state_code from states where state_code not in ('XX')";
 ResultSet rs = st.executeQuery(sql);
